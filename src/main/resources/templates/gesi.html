@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma to HTML/CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #image1 {
+            position: absolute;
+width: 467px;
+height: 143px;
+left: 0px;
+top: 51px;
+background: url(c:\Users\user\Desktop\소프트웨어\html\공구칭구.png);
+        }
+        
+        .horizontal-line {
+  position: absolute;
+  border: 1px solid #000000;
+  transform-origin: left;
+}
+
+.vertical-line {
+  position: absolute;
+  border: 1px solid #000000;
+  transform: rotate(90deg);
+  height: 1440px;
+  transform-origin: top;
+}
+
+#image2 {
+    position: absolute;
+width: 76px;
+height: 76px;
+left: 391px;
+top: 247px;
+
+background: url(c:\Users\user\Desktop\소프트웨어\익명.jpg)
+}
+#image3 {
+    position: absolute;
+width: 76px;
+height: 76px;
+left: 391px;
+top: 493px;
+background: url(c:\Users\user\Desktop\소프트웨어\익명.jpg)
+}
+#image4 {
+    position: absolute;
+width: 76px;
+height: 76px;
+left: 391px;
+top: 739px;
+
+background: url(c:\Users\user\Desktop\소프트웨어\익명.jpg)
+}
+button {
+  background-color: #FDB800;
+  width: 158px;
+  height: 60px;
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+}
+
+button:nth-of-type(1) {
+  left: 1271px;
+  top: 372px;
+}
+
+button:nth-of-type(2) {
+  left: 1271px;
+  top: 619px;
+}
+
+button:nth-of-type(3) {
+  left: 1271px;
+  top: 859px;
+}
+button a {
+  color: #FFFFFF;
+}
+
+#btn1 {
+  position: absolute;
+width: 67px;
+height: 44px;
+left: 143px;
+top: 246px;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+#btn2 {
+  position: absolute;
+width: 67px;
+height: 44px;
+left: 143px;
+top: 344px;
+  background-color: #FFFFFF;
+  color: #BABABA;
+}
+
+#btn3 {
+  position: absolute;
+ width: 67px;
+height: 44px;
+left: 144px;
+top: 438px;
+  background-color:#FFFFFF;
+  color: #BABABA;
+}
+#btn4 {
+  position: absolute;
+width: 67px;
+height: 44px;
+left: 143px;
+top: 534px;
+  background-color:#FFFFFF;
+  color: #BABABA;
+}
+#btn5 {
+  position: absolute;
+  width: 67px;
+height: 44px;
+left: 143px;
+top: 632px;
+  background-color:#FFFFFF;
+  color: #BABABA;
+}
+#btn6 {
+  position: absolute;
+width: 67px;
+height: 44px;
+left: 143px;
+top: 727px;
+  background-color:#FFFFFF;
+  color: #BABABA;
+}
+#btn7 {
+  position: absolute;
+width: 67px;
+height: 44px;
+left: 143px;
+top: 824px;
+  background-color:#FFFFFF;
+  color: #BABABA;
+}
+#btn8 {
+  position: absolute;
+  width: 67px;
+height: 44px;
+left: 143px;
+top: 921px;
+  background-color:#FFFFFF;
+  color: #BABABA;
+}
+  .title {
+    position: absolute;
+width: 90px;
+height: 44px;
+left: 659px;
+top: 130px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.title-2 {
+  position: absolute;
+width: 118px;
+height: 77px;
+left: 749px;
+top: 96px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 42px;
+line-height: 77px;
+
+color: #000000;
+}
+
+
+/* title-3 클래스에 대한 스타일링 */
+.title-3 {
+  position: absolute;
+width: 133px;
+height: 29px;
+left: 504px;
+top: 226px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #0029FF;
+}.title-4 {
+  position: absolute;
+width: 133px;
+height: 29px;
+left: 505px;
+top: 474px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 22px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #0029FF;
+}.title-5 {
+  position: absolute;
+width: 111px;
+height: 29px;
+left: 504px;
+top: 714px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 22px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #0029FF;
+
+}.title-6 {
+  position: absolute;
+width: 172px;
+height: 10px;
+left: 400px;
+top: 400px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #BABABA;
+}.title-7 {
+  position: absolute;
+width: 172px;
+height: 29px;
+left: 400px;
+top: 649px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #BABABA;
+}.title-8 {
+  position: absolute;
+width: 172px;
+height: 29px;
+left: 400px;
+top: 889px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #BABABA;
+
+}.title-9 {
+  position: absolute;
+width: 340px;
+height: 44px;
+left: 504px;
+top: 263px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 33px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #000000;
+
+}.title-10 {
+  position: absolute;
+width: 399px;
+height: 44px;
+left: 504px;
+top: 509px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 33px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #000000;
+
+}.title-11 {
+  position: absolute;
+width: 398px;
+height: 44px;
+left: 504px;
+top: 754px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 33px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #000000;
+}.title-12 {
+  position: absolute;
+width: 726px;
+height: 29px;
+left: 504px;
+top: 343px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #000000;
+
+}.title-13 {
+  position: absolute;
+width: 184px;
+height: 29px;
+left: 504px;
+top: 598px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 21px;
+line-height: 29px;
+}.title-14 {
+  position: absolute;
+width: 657px;
+height: 29px;
+left: 504px;
+top: 831px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #000000;
+}.title-15 {
+  position: absolute;
+width: 64px;
+height: 29px;
+left: 1373px;
+top: 410px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #000000;
+
+}.title-16 {
+  position: absolute;
+width: 56px;
+height: 29px;
+left: 1373px;
+top: 655px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #000000;
+
+}.title-17 {
+  position: absolute;
+width: 63px;
+height: 29px;
+left: 1366px;
+top: 897px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+  
+
+    </style>
+</head>
+<body>
+    <img id="image1" src="c:\Users\user\Desktop\소프트웨어\html\공구칭구.png" width="250" height="40">
+
+    <div class="horizontal-line" style="position: absolute; width: 2440px; height: 0px; left: 0px; top: 217.5px; border: 1px solid #000000;"></div>
+    <div class="horizontal-line" style="position: absolute; width: 2087px; height: 0px; left: 353px; top: 463.5px; border: 1px solid #000000;"></div>
+    <div class="horizontal-line" style="position: absolute; width: 2087px; height: 0px; left: 353px; top: 709.5px; border: 1px solid #000000;"></div>
+    <div class="horizontal-line" style="position: absolute; width: 2087px; height: 0px; left: 353px; top: 955.5px; border: 1px solid #000000;"></div>
+    <div class="horizontal-line" style="position: absolute; width: 353px; height: 0px; left: 0px; top: 317.5px; border: 1px solid #000000;"></div>
+    <div class="horizontal-line" style="position: absolute; width: 353px; height: 0px; left: 0px; top: 413.5px; border: 1px solid #000000;"></div>
+    <div class="horizontal-line" style="position: absolute; width: 353px; height: 0px; left: 0px; top: 509.5px; border: 1px solid #000000;"></div>
+    <div class="horizontal-line" style="position: absolute; width: 353px; height: 0px; left: 0px; top: 605.5px; border: 1px solid #000000;"></div>
+    <div class="horizontal-line" style="position: absolute; width: 353px; height: 0px; left: 0px; top: 701.5px; border: 1px solid #000000;"></div>
+    <div class="horizontal-line" style="position: absolute; width: 353px; height: 0px; left: 0px; top: 797.5px; border: 1px solid #000000;"></div>
+    <div class="horizontal-line" style="position: absolute; width: 353px; height: 0px; left: 0px; top: 893.5px; border: 1px solid #000000;"></div>
+    <div class="horizontal-line" style="position: absolute; width: 353px; height: 0px; left: 0px; top: 989.5px; border: 1px solid #000000;"></div>
+    <div class="vertical-line" style="position: absolute; width: 807px; height: 0px; left: -50px; top: 624px; border: 1px solid #000000; transform: rotate(90deg);"></div>
+
+    <img id="image2" src="c:\Users\user\Desktop\소프트웨어\익명.jpg" width="76" height="76">
+    <img id="image3" src="c:\Users\user\Desktop\소프트웨어\익명.jpg" width="76" height="76">
+    <img id="image4" src="c:\Users\user\Desktop\소프트웨어\익명.jpg" width="76" height="76">
+
+    <button><a href="page1.html">참여하기</a></button>
+	  <button><a href="page2.html">참여하기</a></button>
+	  <button><a href="page3.html">참여하기</a></button>
+
+    <button id="btn1">육류</button>
+    <button id="btn2">과일</button>
+    <button id="btn3">과일</button>
+    <button id="btn4">과일</button>
+    <button id="btn5">과일</button>
+    <button id="btn6">과일</button>
+    <button id="btn7">과일</button>
+    <button id="btn8">과일</button>
+   
+    <p class="title">식품 </p>
+<p class="title-2">>육류</p>
+<p class="title-3">자취생 짠순이         </p>
+<p class="title-4">피클빼주세요         </p>
+<p class="title-5">공대싫어요        </p>
+<p class="title-6">경상국립대(가좌)       </p>
+<p class="title-7">경상국립대(가좌)       </p>
+<p class="title-8">경상국립대(칠암)       </p>
+<p class="title-9">오리고기/ 2-4명/ 오늘        </p>
+<p class="title-10">닭고기/ 2명/ 오늘 3시까지        </p>
+<p class="title-11">소고기/ 4명/ 내일 7시까지     </p>
+<p class="title-12">오리고기 공구 하실뿐~       </p>
+<p class="title-13">닭땡긴다 얼른 급구    </p>
+<p class="title-14">소소소나무 소      </p>
+<p class="title-15">14:10         </p>
+<p class="title-16">14:09     </p>
+<p class="title-17">14:00       </p>
+
+
+
+    
+
+
+
+
+</body>
+</html>
