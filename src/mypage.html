@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공구칭구</title>
+    <script
+      src="https://kit.fontawesome.com/1035ee5251.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      img {
+        position: relative;
+        left: 0px;
+        bottom: 180px;
+      }
+
+      /*검색창*/
+      .search {
+        position: relative;
+        bottom: 460px;
+        left: 550px;
+
+        align-items: center;
+      }
+
+      /*검색창 사이즈*/
+      .search input[type="text"] {
+        width: 650px;
+        height: 50px;
+
+        padding: 10px;
+        border: 1px solid #6A6A6A;
+        border-radius: 5px;
+
+        
+        font-size: 25px;
+        
+
+
+      }
+
+      /* 검색 버튼 */
+      .btn1 {
+       
+        background-color: #f7c111;
+        color: white;
+        border-radius: 5px;
+        border: none;
+       
+        width:100px;
+        height: 70px;
+        font-size: 23px;
+
+        position: relative;
+        bottom: 530px;
+        left: 1250px;
+      }
+
+      h2 {
+        font-size: 45pt;
+
+        position: relative;
+        left: 150px;
+        bottom: 400px;
+      }
+
+      /*프로필 아이콘*/
+      i {
+        font-size: 8rem;
+
+        position: relative;
+        left: 180px;
+        bottom: 400px;
+      }
+
+      span {
+        position: relative;
+        left: 230px;
+        bottom: 455px;
+        font-size: 33pt;
+      }
+
+      /*개인정보 변경버튼*/
+      .btn2 {
+        background-color: white;
+        color: black;
+        border: none;
+        font-size: 23pt;
+
+        position: relative;
+        left: 360px;
+        bottom: 445px;
+      }
+
+      /*회원탈퇴 버튼*/
+      .btn3 {
+        background-color: white;
+        color: black;
+        border: none;
+        font-size: 23pt;
+
+        position: relative;
+        left: 360px;
+        bottom: 445px;
+      }
+
+      /*작성한 게시물 버튼*/
+      .btn4 {
+        background-color: #f7c111;
+        color: white;
+        width: 347px;
+        height: 80px;
+        border: none;
+
+        font-size: 30pt;
+
+        position: relative;
+        left: 200px;
+        bottom: 350px;
+      }
+
+       /*리뷰확인 버튼*/
+       .btn5 {
+        background-color: #f7c111;
+        color: white;
+        width: 347px;
+        height: 80px;
+        border: none;
+
+        font-size: 30pt;
+
+        position: relative;
+        left: 500px;
+        bottom: 350px;
+      }
+
+      /*공지사항 버튼*/
+      .btn6{
+
+        background-color: #f7c111;
+        color: white;
+        width: 347px;
+        height: 80px;
+        border: none;
+
+        font-size: 30pt;
+
+        position: relative;
+        left: 200px;
+        bottom: 260px;
+      }
+
+
+      /*문의하기 버튼*/
+      .btn7{
+        background-color: #f7c111;
+        color: white;
+        width: 347px;
+        height: 80px;
+        border: none;
+
+        font-size: 30pt;
+
+        position: relative;
+        left: 500px;
+        bottom: 260px;
+      }
+
+      .total{
+        position: relative;
+        bottom:110px;
+      }
+
+      /*상단 마이페이지 버튼*/
+      .btn8{
+        color: #878787;
+        background-color: white;
+        font-size: 22px;
+        border: none;
+
+        position: relative;
+        bottom:640px;
+        left:1125px;
+
+      }
+
+      /*상단 로그아웃 버튼*/
+      .btn9{
+        color: #878787;
+        background-color: white;
+        font-size: 22px;
+        border: none;
+
+        position: relative;
+        bottom:640px;
+        left:1140px;
+
+      }
+
+      
+
+    </style>
+  </head>
+  <body>
+    <img src="/Users/jeanmori/Desktop/3-1/soft/icon/logo.png" />
+
+    <div class="search">
+      <input type="text" placeholder="공동구매 할 검색어를 입력하세요." />
+    </div>
+
+    <div>
+      <input type="submit" class="btn1" value="검색">
+    </div>
+
+    <div>
+      <button class="btn8" onClick="location.href='mypage.html'">마이페이지</button>
+      <button class="btn9">로그아웃</button>
+    </div>
+
+    <div class="total">
+    <h2>마이페이지</h2>
+
+    <i class="fa-solid fa-circle-user"></i>
+
+    <span> <b>홍길동 </b></span>
+    <span>님</span>
+
+    <div>
+      <button class="btn2" onClick="location.href='information_change.html'">개인정보 변경</button>
+      <button class="btn3">회원 탈퇴</button>
+    </div>
+
+    <div>
+      <button class="btn4">작성한 게시물</button>
+      <button class="btn5">리뷰확인</button>
+    </div>
+
+    <div>
+      <button class="btn6">공지사항</button>
+      <button class="btn7">문의하기</button>
+    </div>
+
+</div>
+  </body>
+</html>
