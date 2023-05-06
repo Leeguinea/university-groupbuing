@@ -24,11 +24,11 @@ public class BoardController {
     @PostMapping("/gesizak")
     public String write(BoardDTO boardDTO) {
         boardService.write(boardDTO);
-        return "gesi";
+        return "real_fi_gesi";
     }
 
     @GetMapping("/gesi")
     public String postForm(){
-        return "gesi";
+        return "real_fi_gesi";
     }
 }
