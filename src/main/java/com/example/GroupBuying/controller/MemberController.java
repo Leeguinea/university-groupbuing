@@ -31,4 +31,5 @@ public class MemberController {
         memberService.save(memberDTO); //memberService 객체의 save 메소드를 호출하면서 동시에 DTO 객체를 넘겼다.
             return "login";
     }
+
 }
