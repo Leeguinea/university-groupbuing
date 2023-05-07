@@ -30,7 +30,7 @@ public class BoardController {
     @PostMapping("/gesizak")
     public String write(BoardDTO boardDTO, Model model) {
         boardService.write(boardDTO);
-        model.addAttribute("message", "게시물 등록이 완료되었습니다.");
+        model.addAttribute("message", "게시물 등록이 완료되었습니다");
         model.addAttribute("searchUrl", "/gesi");
         return "message";
     }
