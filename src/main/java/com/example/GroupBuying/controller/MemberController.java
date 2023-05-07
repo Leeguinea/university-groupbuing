@@ -4,6 +4,7 @@ import com.example.GroupBuying.dto.MemberDTO;
 import com.example.GroupBuying.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,6 +29,9 @@ public class MemberController {
         public String save(@ModelAttribute MemberDTO memberDTO) {  //회원가입에 필요한 정보를 DTO 객체로 받아왔다. (from join.html파일)
         System.out.println("memberDTO = " + memberDTO);
         memberService.save(memberDTO); //memberService 객체의 save 메소드를 호출하면서 동시에 DTO 객체를 넘겼다.
-            return "login";
+        return "login";
     }
+
+
+
 }
