@@ -26,7 +26,6 @@ public class MemberController {
     // post 방식으로 데이터를 보냈기 때문에 Postmapping 어노테이션을 사용해서 데이터를 받는다.
     @PostMapping("/GroupBuying/join")
         public String save(@ModelAttribute MemberDTO memberDTO) {  //회원가입에 필요한 정보를 DTO 객체로 받아왔다. (from join.html파일)
-        System.out.println("MemberController.save");
         System.out.println("memberDTO = " + memberDTO);
         memberService.save(memberDTO); //memberService 객체의 save 메소드를 호출하면서 동시에 DTO 객체를 넘겼다.
             return "login";
