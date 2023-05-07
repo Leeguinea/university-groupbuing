@@ -6,6 +6,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.lang.reflect.Member;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Getter
 @Builder
@@ -22,5 +25,7 @@ public class Board {
     private String item;
     private String content;
     private String category;
-
+    private LocalDateTime datetime;
+    private LocalDate date;
+    private String searchKey;
 }

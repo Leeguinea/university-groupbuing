@@ -4,7 +4,13 @@ import com.example.GroupBuying.dto.BoardDTO;
 import com.example.GroupBuying.entity.Board;
 import com.example.GroupBuying.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -20,7 +26,17 @@ public class BoardService {
                 .category(boardDTO.getCategory())
                 .content(boardDTO.getContent())
                 .recruitment(boardDTO.getRecruitment())
+                .datetime(LocalDateTime.now())
+                .date(LocalDate.now())
                 .build();
         boardRepository.save(board);
+    }
+
+    public List<Board> findAll() {
+        return boardRepository.findAll();
+    }
+
+    public List<Board> findBySearchKeyContaining(String searchKey) {
+        return boardRepository.findBySearchKeyContaining(searchKey);
     }
 }
