@@ -109,6 +109,24 @@ span {
   font-size: smaller;
   color: blue;
 }
+.favorite-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  background-color: transparent;
+  cursor: pointer;
+}/*자스로 클릭하면 빈칸채우기 구현
+function toggleFavorite() {
+  const favoriteButton = document.querySelector('.favorite-button');
+  favoriteButton.classList.toggle('filled');
+}
+*/
+
+.favorite-button.filled {
+  background-color: #000000;
+}
+
 
   </style>
   
@@ -130,6 +148,7 @@ span {
 	</header>
 <div class="post">
   <span id="post1">아이디</span>
+  <button class="favorite-button"></button>
   <h2 class="title">제목1</h2>
   <p class="content">내용1</p>
   <div class="post-meta">
@@ -139,6 +158,7 @@ span {
 </div>
 <div class="post">
   <span id="post2">아이디</span>
+  <button class="favorite-button"></button>
   <h2 class="title">제목2</h2>
   <p class="content">내용2</p>
   <div class="post-meta">
@@ -153,7 +173,7 @@ span {
 	</div>
 	<div class="post">
     <span id="post2">아이디</span>
-		<h2 class="title">제목3</h2>
+    <button class="favorite-button" onclick="toggleFavorite()"></button> <!-- 찜 버튼 -->		<h2 class="title">제목3</h2>
 		<p class="content">내용3</p>
 		<div class="post-meta">
       <button class="join-button">참여하기</button>
