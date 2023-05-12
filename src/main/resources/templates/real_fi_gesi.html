@@ -47,7 +47,7 @@
 
 .topnav-right {
   position: absolute;
-  left: 630px;
+  left: 608px;
   top: 20px;
 }
         .post {
@@ -113,10 +113,11 @@ span {
   width: 15px;
   height: 15px;
   border-radius: 50%;
+  background-color: #ffffff;
   border: 2px solid #000000;
   background-color: transparent;
   cursor: pointer;
-}/*자바스크립트로 클릭하면 빈칸이 채워지는 현상을 구현해야함
+}/*자스
 function toggleFavorite() {
   const favoriteButton = document.querySelector('.favorite-button');
   favoriteButton.classList.toggle('filled');
@@ -126,6 +127,7 @@ function toggleFavorite() {
 .favorite-button.filled {
   background-color: #000000;
 }
+
 
 
   </style>
@@ -173,7 +175,7 @@ function toggleFavorite() {
 	</div>
 	<div class="post">
     <span id="post2">아이디</span>
-    <button class="favorite-button" onclick="toggleFavorite()"></button> <!-- 찜 버튼 -->		<h2 class="title">제목3</h2>
+    <button class="favorite-button"></button>
 		<p class="content">내용3</p>
 		<div class="post-meta">
       <button class="join-button">참여하기</button>
