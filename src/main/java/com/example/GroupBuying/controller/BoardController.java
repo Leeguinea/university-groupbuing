@@ -41,7 +41,7 @@ public class BoardController {
         if(searchKey==null) {
             boardList = boardService.findAll();
         } else {
-            boardList = boardService.findBySearchKeyContaining(searchKey);
+            boardList = boardService.searchKeyList(searchKey);
         }
         model.addAttribute("board", boardList);
         return "gesi";

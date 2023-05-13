@@ -156,30 +156,39 @@ color: #FFFDFD;
     </style>
 </head>
 <body>
+<form action="/GroupBuying/login" method="post">
     <img src="https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/공구칭구.png" alt="이미지1" width="250" height="40">
     <div class="wrap">
         <div class="login">
-             <div class="login_id">
-                <input type="email" name="" id="" placeholder=" 아이디">
+            <div class="login_id">
+                <input type="text" name="Id" placeholder=" 아이디">
             </div>
             <div class="login_pw">
-                <input type="password" name="" id="" placeholder=" 비밀번호">
+                <input type="password" name="pwd" placeholder=" 비밀번호">
             </div>
             <div class="login_etc">
                 <div class="checkbox">
-                <input type="checkbox" name="" id=""> 아이디 저장하기
-            </div>
+                    <input type="checkbox" name="" id=""> 아이디 저장하기
+                </div>
                 <div class="forgot_id">
-                <a href=" https://example.com/id-recovery">아이디찾기</a>
+                    <a href=" https://example.com/id-recovery">아이디찾기</a>
+                </div>
             </div>
-            </div>
-                <div class="forgot_pw">
+            <div class="forgot_pw">
                 <a href=" https://example.com/id-recovery">비밀번호 찾기</a>
             </div>
-            </div>
-                <div class="submit">
-                    <input type="submit" value="로그인">
-            </div>
+        </div>
+        <div class="submit">
+            <input type="submit" value="로그인">
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+</form>
         </div>
     </div>
 

@@ -117,8 +117,10 @@ span {
 	<header>
 		<img src="https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/공구칭구.png" alt="이미지1" style="position: absolute; top: 33px; left: 0px; width: 367px; height: 63px;">
 		<div class="search">
-			<input type="text" placeholder="공동구매 검색어를 입력하세요">
+            <form method="get" th:action="@{/gesi}">
+            <input type="text" name="searchKey" placeholder="공동구매 검색어를 입력하세요">
 			<button type="submit">검색</button>
+            </form>
 		</div>
 		<div class="topnav-right"> 
 			<a href="myPage">마이페이지</a>
@@ -138,11 +140,8 @@ span {
         </div>
     </div>
 </body>
+<a th:href="@{/gesi(searchKey = ${param.searchKeyword})}"></a>
 
-</div>
-<div class="text-center">
-
-</div>
 </html>
 
 </html>

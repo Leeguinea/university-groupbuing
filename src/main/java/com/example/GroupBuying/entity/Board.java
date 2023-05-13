@@ -27,5 +27,4 @@ public class Board {
     private String category;
     private LocalDateTime datetime;
     private LocalDate date;
-    private String searchKey;
 }

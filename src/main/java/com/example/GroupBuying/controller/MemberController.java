@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpSession;
+
 @Controller //MemberController 를 스프링 객체로 등록해주는 어노테이션
 @RequiredArgsConstructor
 public class MemberController {
@@ -31,6 +33,24 @@ public class MemberController {
         System.out.println("memberDTO = " + memberDTO);
         memberService.save(memberDTO); //memberService 객체의 save 메소드를 호출하면서 동시에 DTO 객체를 넘겼다.
         return "login";
+    }
+
+    @GetMapping("/GroupBuying/login")  //주소 요청이 왔을때, 로그인 페이지를 띄워주자.
+    public String loginForm() {
+        return "login";
+    }
+
+    @PostMapping("/GroupBuying/login")
+    public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session) {
+        MemberDTO loginResult = memberService.login(memberDTO);
+        if (loginResult != null) {
+            //로그인 성공시 -> 게시글 창 띄어짐
+            session.setAttribute("loginId",loginResult.getId());
+            return "gesi";
+        } else {
+            //로그인 실패시
+            return "login";
+        }
     }
 
 

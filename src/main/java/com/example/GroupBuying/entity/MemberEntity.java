@@ -41,7 +41,7 @@ public class MemberEntity {
 
     public static MemberEntity toMemberEntity(MemberDTO memberDTO) {  // toMemberEntity 클래스 메소드 선언
         MemberEntity memberEntity = new MemberEntity(); //객체선언
-        memberEntity.setId(memberEntity.getId()); //memeberDTO 객체의 getID 메소드로 부터 값을 얻어서, setID 메소드로 ID값을 설정
+        memberEntity.setId(memberDTO.getId());
         memberEntity.setNickname(memberDTO.getNickname());
         memberEntity.setPwd(memberDTO.getPwd());
         memberEntity.setName(memberDTO.getName());

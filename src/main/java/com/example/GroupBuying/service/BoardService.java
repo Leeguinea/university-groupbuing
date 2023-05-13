@@ -36,7 +36,7 @@ public class BoardService {
         return boardRepository.findAll();
     }
 
-    public List<Board> findBySearchKeyContaining(String searchKey) {
-        return boardRepository.findBySearchKeyContaining(searchKey);
+    public List<Board> searchKeyList(String searchKey) {
+        return boardRepository.findByTitleContaining(searchKey);
     }
 }
