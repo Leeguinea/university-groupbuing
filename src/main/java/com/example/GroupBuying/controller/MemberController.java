@@ -4,11 +4,9 @@ import com.example.GroupBuying.dto.MemberDTO;
 import com.example.GroupBuying.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller //MemberController 를 스프링 객체로 등록해주는 어노테이션
 @RequiredArgsConstructor
@@ -32,6 +30,6 @@ public class MemberController {
         return "login";
     }
 
-
+//test
 
 }
