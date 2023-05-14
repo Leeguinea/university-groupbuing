@@ -1,8 +1,7 @@
 package com.example.GroupBuying.dto;
 
+import com.example.GroupBuying.entity.MemberEntity;
 import lombok.*; // lombok 라이브러리는 클래스에 어노테이션만 붙여주면, 클래스내의 각 필드의 메소드를 생성해준다.
-
-import javax.persistence.GeneratedValue;
 
 @Getter
 @Setter
@@ -23,4 +22,19 @@ public class MemberDTO { //DTO 클래스는 회원정보에 필요한 내용들�
     private String month;
     private String day;
 
+    public static MemberDTO toMemberDTO(MemberEntity memberEntity){
+        MemberDTO memberDTO = new MemberDTO();
+        memberDTO.setId(memberEntity.getId());
+        memberDTO.setNickname(memberEntity.getNickname());
+        memberDTO.setPwd(memberEntity.getPwd());
+        memberDTO.setName(memberEntity.getName());
+        memberDTO.setPhone1(memberEntity.getPhone1());
+        memberDTO.setPhone2(memberEntity.getPhone2());
+        memberDTO.setPhone3(memberEntity.getPhone3());
+        memberDTO.setYear(memberEntity.getYear());
+        memberDTO.setMonth(memberEntity.getMonth());
+        memberDTO.setDay(memberEntity.getDay());
+        return memberDTO;
+
+    }
 }
