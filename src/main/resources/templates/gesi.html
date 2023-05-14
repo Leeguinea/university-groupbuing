@@ -127,10 +127,10 @@ span {
 			<a href="logout">로그아웃</a>
 		</div>
 	</header>
-    <div class="post" th:each="board: ${board}">
+    <div class="post" th:each="board: ${boardList}">
 
         <div class="post-item">
-            <span id="post1" th:text="${board.id}"></span>
+            <span id="post1" th:text="${board.member.nickname}"></span>
             <h2 class="title" th:text="'주제: ' + ${board.title}"></h2>
             <p class="content" th:text="'내용:' +${board.content}"></p>
             <div class="post-meta">

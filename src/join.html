@@ -235,25 +235,6 @@
 
   </form>
     </div>
-    <script>
-      function checkUserId() {
-        const id = document.getElementById("id").value;
-        const nickname = document.getElementById("nickname").value;
-        const pwd = document.getElementById("pwd").value;
-        const name = document.getElementById("name").value;
-        const phone1 = document.getElementById("phone1").value;
-        const phone2 = document.getElementById("phone2").value;
-        const phone3 = document.getElementById("phone3").value;
-        const year = document.getElementById("year").value;
-        const month = document.getElementsByTagName("option")[document.getElementById("month").selectedIndex].value;
-        const day = document.getElementById("day").value;
-
-        if (id === "" || nickname === "" || pwd === "" || name === "" || phone1 === "" || phone2 === "" || phone3 === "" || year === "" || month === "" || day === "") {
-          alert("모든 입력 필드를 채워주세요.");
-          return false;
-        }
-      }
-
-    </script>
+     
   </body>
 </html>

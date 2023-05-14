@@ -24,6 +24,11 @@ public class BoardController {
 
     @GetMapping("/gesizak")
     public String writeForm(Model model, HttpSession session) {
+        if(session.getAttribute("loginId")==null){
+            model.addAttribute("message", "로그인 후 사용이 가능합니다");
+            model.addAttribute("searchUrl", "/");
+            return "message";
+        }
         return "gesi_zak";
     }
 
@@ -43,7 +48,22 @@ public class BoardController {
         } else {
             boardList = boardService.searchKeyList(searchKey);
         }
-        model.addAttribute("board", boardList);
+        model.addAttribute("boardList", boardList);
         return "gesi";
+    }
+
+    @GetMapping("/notice")
+    public String noticeForm(){
+        return "notice";
+    }
+
+    @GetMapping("withdrawal")
+    public String drawForm(){
+        return "withdrawal";
+    }
+
+    @GetMapping("love")
+    public String loveForm(){
+        return "love";
     }
 }

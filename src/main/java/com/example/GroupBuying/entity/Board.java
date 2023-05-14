@@ -2,13 +2,13 @@ package com.example.GroupBuying.entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.lang.reflect.Member;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+
+import static javax.persistence.FetchType.EAGER;
+import static javax.persistence.FetchType.LAZY;
 
 @Getter
 @Builder
@@ -27,4 +27,13 @@ public class Board {
     private String category;
     private LocalDateTime datetime;
     private LocalDate date;
+
+    @ManyToOne(fetch = EAGER)
+    @JoinColumn(name = "member_number")
+    private MemberEntity member;
+
+    public void setMember(MemberEntity member){
+        this.member=member;
+        member.getBoardList().add(this);
+    }
 }
