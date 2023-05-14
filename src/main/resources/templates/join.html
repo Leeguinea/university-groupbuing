@@ -144,29 +144,35 @@
 
   </head>
   <body>
-    <img src="/Users/jeanmori/Desktop/3-1/soft/icon/logo.png" />
+<!-- 회원가입시 작성한 데이터는 controller 서버로 요청이 가야한다. 서비스 클래스로 정보가 넘어가야 한다.-->
+<!-- Post 방식으로 회원 컨트롤러 클래스로 데이터 전송 : 서버로 데이터를 전송하는 방식 -->
+  <form action="/GroupBuying/join" method="post">
+
+    <img src="https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/logo.png" />
 
     <div class="c1">
-      <div class="id">
+      <div name="id">
         <p>아이디</p>
+
         <input
-          type="text" class="id" stlye="width: 694px; height: 40px;">
+          type="text" name="id" stlye="width: 694px; height: 40px;"/>
+
 
       </div>
 
       <div class="nickname">
         <p>닉네임</p>
-        <input type="text" />
+        <input type="text" name="nickname"/>
       </div>
 
       <div class="pwd">
         <p>비밀번호</p>
-        <input type="password" />
+        <input type="password" name="pwd"/>
       </div>
 
       <div class="name">
         <p>이름</p>
-        <input type="text" />
+        <input type="text" name="name"/>
       </div>
     </div>
 
@@ -175,6 +181,7 @@
       <input
         id="phone1"
         type="number"
+        name="phone1"
         size="3"
         maxlength="3"
         oninput="changePhone1()"
@@ -184,6 +191,7 @@
       <input
         id="phone2"
         type="number"
+        name="phone2"
         size="3"
         maxlength="4"
         oninput="changePhone2()"
@@ -192,6 +200,7 @@
       <input
         id="phone3"
         type="number"
+        name="phone3"
         size="3"
         maxlength="4"
         oninput="changePhone3()"
@@ -201,23 +210,23 @@
     <div class="c3">
       <p>생년월일</p>
       <div>
-        <input type="number" style="position: relative; right:35px;" placeholder="년(4자)" />
-        <select style="width:210px; height:45px; position:relative; bottom:33px; font-size:30pt">
+        <input type="number" name="year" style="position: relative; right:35px;" placeholder="년(4자)" />
+        <select style="width:210px; height:45px; position:relative; bottom:33px; font-size:30pt" name="month">
           <option value="">월</option>
-          <option value="">1월</option>
-          <option value="">2월</option>
-          <option value="">3월</option>
-          <option value="">4월</option>
-          <option value="">5월</option>
-          <option value="">6월</option>
-          <option value="">7월</option>
-          <option value="">8월</option>
-          <option value="">9월</option>
-          <option value="">10월</option>
-          <option value="">11월</option>
-          <option value="">12월</option>
+          <option value="1월">1월</option>
+          <option value="2월">2월</option>
+          <option value="3월">3월</option>
+          <option value="4월">4월</option>
+          <option value="5월">5월</option>
+          <option value="6월">6월</option>
+          <option value="7월">7월</option>
+          <option value="8월">8월</option>
+          <option value="9월">9월</option>
+          <option value="10월">10월</option>
+          <option value="11월">11월</option>
+          <option value="12월">12월</option>
         </select>
-        <input type="number" style="position: relative; left:35px;" placeholder="일" />
+        <input type="number" name="day" style="position: relative; left:35px;" placeholder="일" />
       </div>
     </div>
 
@@ -227,9 +236,12 @@
     </div>
 
     <div>
-      <input type="submit" class="btn2" value="가입하기";  onclick="alert('가입이 완료되었습니다.')"/>
+      <input type="submit" class="btn2" value="가입하기";/>
     </div>
 
+    <a href="/Groupbuying/file_upload">학교인증</a>
+<!-- 학교 인증 버튼 즉 링크를 클릭하는것은 HTTP 메소드에서 Get 메소드를 요청하는 것이다.-->
 
+  </form>
   </body>
 </html>
