@@ -1,10 +1,13 @@
 package com.example.GroupBuying.service;
 
+//테스트용 주석
 import com.example.GroupBuying.dto.MemberDTO;
 import com.example.GroupBuying.entity.MemberEntity;
 import com.example.GroupBuying.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service //스프링이 관리해주는 객체로 등록
 @RequiredArgsConstructor
@@ -18,4 +21,31 @@ public class MemberService {
         memberRepository.save(memberEntity); //repository의 save 메소드 호출(Entity 객체를 넘겨주면서)
 
     }
+
+    public MemberDTO login(MemberDTO memberDTO) {
+        /*
+            1. 회원이 입력한 아이디를 DB에서 조회함.
+            2. 위의 1번이 일치하다면 -> 사용자가 입력한 비밀번호와 DB에서 조회한 비밀번호가 일치하는지 판단.
+         */
+
+        Optional<MemberEntity> byId = memberRepository.findById(memberDTO.getId()); //엔티티 객체를 Optional로 감싼 상태
+        MemberEntity memberEntity;
+        if (byId.isPresent()) {
+            // 조회 결과, 해당 Id를 가진 회원정보가 DB에 있다. (비번은 아직 확인 안한 상태)
+            memberEntity = byId.get();
+            if (memberEntity.getPwd().equals(memberDTO.getPwd())) {
+                //비밀번호가 일치하는 경우 -> Entity를 DTO로 변환해서 Controller로 전달해준다.
+                MemberDTO dto = MemberDTO.toMemberDTO(memberEntity);
+                return dto;
+            } else {
+                //비밀번호가 불일치(로그인 실패)
+                return null;
+            }
+        } else {
+            // 조회 결과가 없다.
+            return null;
+        }
+
+    }
+
 }

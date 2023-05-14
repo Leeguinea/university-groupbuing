@@ -3,6 +3,7 @@ package com.example.GroupBuying.entity;
 import com.example.GroupBuying.dto.MemberDTO;
 import lombok.Getter;
 import lombok.Setter;
+import org.jetbrains.annotations.NotNull;
 
 import javax.persistence.*;
 
@@ -36,12 +37,13 @@ public class MemberEntity {
     @Column
     private String day;
 
+    @NotNull
     @Column(unique = true) //unique 제약 조건 추가
     private String id;
 
     public static MemberEntity toMemberEntity(MemberDTO memberDTO) {  // toMemberEntity 클래스 메소드 선언
         MemberEntity memberEntity = new MemberEntity(); //객체선언
-        memberEntity.setId(memberEntity.getId()); //memeberDTO 객체의 getID 메소드로 부터 값을 얻어서, setID 메소드로 ID값을 설정
+        memberEntity.setId(memberDTO.getId()); //memeberDTO 객체의 getID 메소드로 부터 값을 얻어서, setID 메소드로 ID값을 설정
         memberEntity.setNickname(memberDTO.getNickname());
         memberEntity.setPwd(memberDTO.getPwd());
         memberEntity.setName(memberDTO.getName());
