@@ -45,7 +45,7 @@
 }
 .topnav-right {
   position: absolute;
-  left: 654px;
+  left: 570px;
   top: 168px;
 }
 /* .buuu a {
@@ -89,21 +89,86 @@
 </head>
 <body>
     <header>
-        <img src="https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/공구칭구.png" alt="이미지1" style="position: absolute; top: 100px; left: 320px; width: 367px; height: 63px;">
-        <div class="search">
+      
+      
+       
+      <div class="search">
             <form method="post" action="/home">
           <input type="text" name="searchKey" placeholder="공동구매 검색어를 입력하세요">
           <button type="submit">검색</button>
             </form>
         </div>
+
         <div class="topnav-right">
-          <a href="/GroupBuying/join">회원가입</a>
-          <a href="/GroupBuying/login">로그인</a>
+          <a href="#gongi">공지사항</a>
+          <a href="#jjim">찜</a>
+          <a href="join.html">회원가입</a>
+          <a href="login.html">로그인</a>
         </div>
-        <div class="buuu">
-          <a href="#gori">카테고리 바로가기</a>
-          <a href="gesizak">게시글 작성하기</a>
-        </div>
+
+
+       
+       <!-- <div class="topnav-right">
+  <a href="#gongi">공지사항</a>
+  <a href="#jjim">찜</a>
+  <a id="joinLoginContainer">
+    <a id="mypageLink" href="#" style="display: none;">마이페이지</a>
+    <a id="logoutLink" href="#" style="display: none;">로그아웃</a>
+  </a>
+</div>
+
+<script>
+  // 로그인 상태를 확인하고 메뉴 항목을 동적으로 변경하는 함수
+  function checkLoginStatus() {
+    var isLoggedIn = false; // 로그인 상태 여부를 나타내는 변수 (예시로 기본값 false로 설정)
+
+    // 로그인 상태를 확인하는 로직 작성 (예시로 확인하는 코드는 생략)
+
+    var joinLoginContainer = document.getElementById("joinLoginContainer");
+
+    // 로그인 상태에 따라 메뉴 항목 변경
+    if (isLoggedIn) {
+      joinLoginContainer.innerHTML = `
+        <a id="mypageLink" href="#">마이페이지</a>
+        <a id="logoutLink" href="#">로그아웃</a>
+      `;
+    } else {
+      joinLoginContainer.innerHTML = `
+        <a href="join.html">회원가입</a>
+        <a href="login.html">로그인</a>
+      `;
+    }
+  }
+
+  // 페이지 로드 시 로그인 상태 확인
+  window.addEventListener("load", checkLoginStatus);
+</script> -->
+
+<div class="buuu">
+  <a href="real_fi_gesi.html">게시판 바로가기</a>
+  <a href="javascript:void(0);" onclick="checkLogin()">게시글 작성하기</a>
+</div>
+
+<script>
+  function checkLogin() {
+    // 예시로 로그인 상태 확인
+    var isLoggedIn = false; // 로그인 상태 여부를 나타내는 변수 (예시로 기본값 false로 설정)
+
+    // 로그인 상태를 확인하는 로직 작성 (예시로 확인하는 코드는 생략)
+
+    if (isLoggedIn) {
+      // 로그인 상태일 때, 게시글 작성 페이지로 이동
+      window.location.href = "gesi_zak.html";
+    } else {
+      // 로그인 상태가 아닐 때, 알림 창 표시
+      alert("로그인이 필요한 서비스입니다.");
+    }
+  }
+</script>
+
+        <a href="home.html">
+          <img src="https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/공구칭구.png" alt="이미지1" style="position: absolute; top: 100px; left: 320px; width: 367px; height: 63px;">
+          </a> 
       </header>
       
 
