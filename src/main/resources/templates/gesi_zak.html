@@ -55,7 +55,7 @@ header {
 
 .topnav-right {
   position: absolute;
-  left: 730px;
+  left: 660px;
   top: 20px;
 }
 .post-gesi {
@@ -77,10 +77,14 @@ header {
 	font-weight: bold;
 }
 
-.post-form input[type="text"], .post-form input[type="number"], .post-form select, .post-form textarea {
+.post-form input[type="text"],
+.post-form input[type="number"],
+.post-form select,
+.post-form textarea {
 	width: 100%;
-	padding: 
+	padding: 1px;
 }
+
 .post-category, .post-items {
     display: inline-block;
     width: 45%;
@@ -91,13 +95,69 @@ header {
 .post-recruitment {
     width: 44.4%;
 }
-.post-buttons {
+
+.post-cansle {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+
+  cursor: pointer;
+  
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  left: 400px;
+  top: 600px;
+  border: 0;
+  outline: none;
+  background: #F6C105;
+  border-radius: 10px;
+}
+.post-dul {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  cursor: pointer;
+  
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  left: 510px;
+  top: 600px;
+  border: 0;
+  outline: none;
+  background: #F6C105;
+  border-radius: 10px;
 }
 
-#cancel, #submit {
+.post-cansle a {
+    position: absolute;
+    left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 48px;
+  color: #FFFDFD;
+  text-decoration: none;
+}
+.post-dul a {
+    position: absolute;
+    left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 48px;
+  color: #FFFDFD;
+  text-decoration: none;
+}
+/* #cancel, #submit {
   background-color: #f7c111;
   color: white;
   padding: 10px 20px;
@@ -114,7 +174,7 @@ header {
 #content {
   font-family: "맑은 고딕", Arial, sans-serif;
 }
-
+ */
 
 
 
@@ -137,7 +197,9 @@ header {
         </div>
 
 		<div class="topnav-right"> 
-            <a href="#myPage">마이페이지</a>
+      <a href="notice.html">공지사항</a>
+      <a href="love.html">찜</a>
+            <a href="mypage.html">마이페이지</a>
             <a href="#logout">로그아웃</a>
         </div>
 
@@ -182,17 +244,28 @@ header {
                 </div>
 
 
-
+                <a href="home.html">
                 <img src="https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/공구칭구.png" alt="이미지1" style="position: absolute; top: 33px; left: 0px; width: 367px; height: 63px;">
-               
+                </a>
 			<div class="post-image">
 				<label for="image">사진 첨부하기</label>
 				<input type="file" id="image" name="image">
 			</div>
-			<div class="post-buttons">
-				<button type="button" id="cancel">취소</button>
-				<input type="submit" value="등록">
-			</div>
+			<div class="post-cansle">
+				<a href="home.html">취소</a>
+      </div>
+      
+    <div class="post-dul">
+       <a href="real_fi_gesi.html" onclick="showAlert()">등록</a>		
+    </div>
+
+    <script>
+      function showAlert() {
+        alert("게시글 등록 완료");
+        window.location.href = "real_fi_gesi.html";
+      }
+    </script>
+    
 			</form>
 		</div>
 	</main>

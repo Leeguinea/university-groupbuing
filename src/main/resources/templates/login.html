@@ -7,14 +7,7 @@
     <title>Document</title>
 
     <style>
-        img{
-            position: absolute;
-            width: 500px;
-            height: 101px;
-            left: 470px;
-            top: 116px;
-            background: url(https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/공구칭구.png);
-        }
+        
 
         .login_id {
             margin-top: 100px;
@@ -27,7 +20,7 @@
             position: absolute;
             width: 517px;
             height: 93px;
-            left: 479px;
+            left: 250px;
             top: 370px;
 
             background: #FFFFFF;
@@ -44,7 +37,7 @@
             position: absolute;
             width: 139px;
             height: 29px;
-            left: 523px;
+            left: 250px;
             top: 405px;
 
             font-family: 'Inter';
@@ -65,7 +58,7 @@
             position: absolute;
             width: 517px;
             height: 93px;
-            left: 479px;
+            left: 250px;
             top: 471px;
 
             background: #FFFFFF;
@@ -82,7 +75,7 @@
             position: absolute;
             width: 307px;
             height: 24px;
-            left: 529px;
+            left: 250px;
             top: 583px;
 
             font-family: 'Inter';
@@ -97,7 +90,7 @@
             position: absolute;
             width: 100px;
             height: 100px;
-            left: 250px;
+            left: 150px;
             top: 267px;
 
             font-family: 'Inter';
@@ -106,13 +99,16 @@
             font-size: 20px;
             line-height: 24px;
 
-            color: #000000;
         }
+        .forgot_id a {
+            color: #000000;
+  text-decoration: none; /* 밑줄 제거 */
+}
         .forgot_pw {
             position: absolute;
             width: 317px;
             height: 24px;
-            left: 618px;
+            left: 520px;
             top: 850px;
 
             font-family: 'Inter';
@@ -121,34 +117,57 @@
             font-size: 20px;
             line-height: 24px;
 
+        }
+        .forgot_pw a {
             color: #000000;
-        }
-        .submit {
-            margin-top: 50px;
-            width: 80%;
-        }
-        .submit input {
-            cursor: pointer;
+  text-decoration: none; /* 밑줄 제거 */
+}
+        
+    
+.submit {
+  margin-top: 50px;
+  width: 80%;
+  cursor: pointer;
+  
+  position: absolute;
+  width: 517px;
+  height: 118px;
+  left: 250px;
+  top: 600px;
+  border: 0;
+  outline: none;
+  background: #F6C105;
+  border-radius: 20px;
+}
 
-            position: absolute;
-            width: 517px;
-            height: 118px;
-            left: 479px;
-            top: 669px;
-            border: 0;
-            outline: none;
-            background: #F6C105;
-            border-radius: 20px;
+.submit a {
+    position: absolute;
+    left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFDFD;
+  text-decoration: none;
+}
+/* 
+.login-box {
+  cursor: pointer;
+  position: absolute;
+  width: 517px;
+  height: 118px;
+  left: 250px;
+  top: 669px;
+  border: 0;
+  outline: none;
+  background: #F6C105;
+  border-radius: 20px;
+} */
 
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 40px;
-            line-height: 48px;
 
-            color: #FFFDFD;
-
-        }
 
 
 
@@ -157,30 +176,51 @@
 </head>
 <body>
 <form action="/GroupBuying/login" method="post">
-    <img src="https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/공구칭구.png" alt="이미지1" width="250" height="40">
+    <a href="home.html">
+		<img src="https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/공구칭구.png" alt="이미지1" style="position: absolute; top: 116px; left: 250px; width: 500px; height: 101px;">
+    </a>
     <div class="wrap">
         <div class="login">
-            <div class="login_id">
-                <input type="text" name="id" id="id" placeholder=" 아이디">
+          <div class="login_id">
+            <input type="text" name="id" id="id" placeholder=" 아이디">
+          </div>
+          <div class="login_pw">
+            <input type="password" name="pwd" id="pwd" placeholder=" 비밀번호">
+          </div>
+          <div class="login_etc">
+            <div class="checkbox">
+              <input type="checkbox" name="" id=""> 아이디 저장하기
             </div>
-            <div class="login_pw">
-                <input type="password" name="pwd" pwd="pwd" placeholder=" 비밀번호">
-            </div>
-            <div class="login_etc">
-                <div class="checkbox">
-                    <input type="checkbox" name="" id=""> 아이디 저장하기
-                </div>
-                <div class="forgot_id">
-                    <a href=" https://example.com/id-recovery">아이디찾기</a>
-                </div>
-            </div>
-            <div class="forgot_pw">
-                <a href=" https://example.com/id-recovery">비밀번호 찾기</a>
-            </div>
+          </div>
         </div>
+      
         <div class="submit">
-            <input type="submit" value="로그인">
+            <a href="home.html">로그인</a>
+          </div>
+        <!-- <div class="submit">
+          <a href="javascript:void(0);" onclick="login()">로그인</a>
         </div>
+      </div>
+      
+      <script>
+        function login() {
+          var id = document.getElementById("id").value;
+          var password = document.getElementById("pwd").value;
+      
+          // 예시로 로그인 실패 조건을 설정
+          if (id === "admin" && password === "12345") {
+            // 로그인 성공 시
+            window.location.href = "home.html";
+          } else {
+            // 로그인 실패 시
+            alert("로그인에 실패했습니다. 아이디와 비밀번호를 확인해주세요.");
+          }
+        }
+      </script> -->
+      
+        
+        
+        
     </div>
     </div>
 
