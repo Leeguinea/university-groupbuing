@@ -39,6 +39,7 @@ public class BoardService {
                 .recruitment(boardDTO.getRecruitment())
                 .datetime(LocalDateTime.now())
                 .date(LocalDate.now())
+                .writer(loginId)
                 .member(member)
                 .build();
         boardRepository.save(board);
@@ -51,5 +52,10 @@ public class BoardService {
 
     public List<Board> searchKeyList(String searchKey) {
         return boardRepository.findByTitleContaining(searchKey);
+    }
+
+    public List<Board> findByWriter(String loginId) {
+        System.out.println("loginId = " + loginId);
+        return boardRepository.findByWriter(loginId);
     }
 }

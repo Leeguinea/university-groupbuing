@@ -58,6 +58,8 @@
         bottom: 510px;
       }
 
+      
+
       /*상단 마이페이지 버튼*/
       .btn8 {
         color: #878787;
@@ -81,6 +83,38 @@
         bottom: 640px;
         left: 1140px;
       }
+
+        /*상단 공지사항 버튼*/
+        .btn10{
+        color: #878787;
+        background-color: white;
+        font-size: 22px;
+        border: none;
+
+        position: relative;
+        bottom:640px;
+        left:1105px;
+
+      }
+
+        /*상단 찜 버튼*/
+        .btn11{
+          color: #878787;
+        background-color: white;
+        font-size: 22px;
+        border: none;
+
+        position: relative;
+        bottom: 640px;
+        left: 1120px;
+      }
+
+       /* 상단 4개버튼 위치이동*/
+       .top{
+
+position: relative;
+right:90px;
+}
 
       /*새로운 닉네임을 입력하세요*/
       .p1 {
@@ -179,7 +213,11 @@ position: relative;
     </style>
   </head>
   <body>
+
+    <!--이미지 클릭시 메인 페이지 이동-->
+    <a href="home.html">
     <img src="/Users/jeanmori/Desktop/3-1/soft/icon/logo.png" />
+    </a>
 
     <div class="search">
       <input type="text" placeholder="공동구매 할 검색어를 입력하세요." />
@@ -189,7 +227,11 @@ position: relative;
       <input type="submit" class="btn1" value="검색" />
     </div>
 
-    <div>
+    <div class="top">
+      <button class="btn11" onClick="location.href='love.html'">
+        찜
+      </button>
+      <button class="btn10" onClick="location.href='notice.html'">공지사항</button>
       <button class="btn8" onClick="location.href='mypage.html'">마이페이지</button>
       <button class="btn9">로그아웃</button>
     </div>
@@ -239,7 +281,7 @@ position: relative;
           />
         </p>
       </div>
-    </form>
+  
 
     <div class="button">
     <input type="button" class="btn2" value="취소" onClick="location.href='mypage.html'"/>
@@ -252,5 +294,6 @@ position: relative;
     />
 
 </div>
+</form>
   </body>
 </html>

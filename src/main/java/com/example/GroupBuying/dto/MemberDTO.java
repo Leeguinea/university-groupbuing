@@ -3,8 +3,6 @@ package com.example.GroupBuying.dto;
 import com.example.GroupBuying.entity.MemberEntity;
 import lombok.*; // lombok 라이브러리는 클래스에 어노테이션만 붙여주면, 클래스내의 각 필드의 메소드를 생성해준다.
 
-import javax.persistence.GeneratedValue;
-
 @Getter
 @Setter
 @NoArgsConstructor //기본생성자를 자동 생성

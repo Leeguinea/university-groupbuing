@@ -23,7 +23,7 @@
         bottom: 150px;
       }
 
-    
+    /*아이디 입력창*/
       .c1 {
         font-size: 45px;
         text-align: center;
@@ -57,6 +57,8 @@
         bottom:35px;
       }
 
+
+      /*비밀번호 입력창*/
       .pwd{
         position: relative;
         bottom:70px;
@@ -72,6 +74,7 @@
       
            
 
+      /*아이디 입력박스 크기조정*/
             input[type="text"]{
                 width: 694px;
                 height: 40px;
@@ -81,6 +84,8 @@
 
                 font-size: 30pt;
             }
+
+            /*비밀번호 입력박스 크기조정*/
 
             input[type="password"]{
                 width: 694px;
@@ -92,6 +97,7 @@
                 font-size: 30pt;
             }
 
+                 /*휴대폰번호 입력박스 크기조정*/
             input[type="number"]{
                 width: 200px;
                 height: 40px;
@@ -135,9 +141,6 @@
                 bottom:300px;
             }
 
-          
-
-            
 
     </style>
 
@@ -149,21 +152,24 @@
 <div>
   <form action="/GroupBuying/join" method="post" onsubmit="return checkUserId();">
 
-    <img src="https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/logo.png" />
 
+     <!--이미지 클릭시 메인 페이지 이동-->
+     <a href="home">
+       <img src="https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/logo.png" />
+
+     </a>
+<form method="post">
     <div class="c1">
-      <div name="id">
+      <div class="id">
         <p>아이디</p>
-
         <input
-          type="text" name="id" stlye="width: 694px; height: 40px;"/>
-
+          type="text" name="id" class="id" stlye="width: 694px; height: 40px;">
 
       </div>
 
       <div class="nickname">
         <p>닉네임</p>
-        <input type="text" name="nickname"/>
+        <input type="text" name="nickname" />
       </div>
 
       <div class="pwd">
@@ -182,17 +188,17 @@
       <input
         id="phone1"
         type="number"
-        name="phone1"
         size="3"
         maxlength="3"
         oninput="changePhone1()"
-        placeholder="010" 
+        placeholder="010"
+        name="phone1"
       />
       -
       <input
         id="phone2"
-        type="number"
         name="phone2"
+        type="number"
         size="3"
         maxlength="4"
         oninput="changePhone2()"
@@ -200,8 +206,8 @@
       -
       <input
         id="phone3"
-        type="number"
         name="phone3"
+        type="number"
         size="3"
         maxlength="4"
         oninput="changePhone3()"
@@ -235,10 +241,9 @@
         <input type="button" class="btn1" value="학교인증" ; />
       </div>
 
-      <input type="submit" class="btn2" value="가입하기";/>
-
-    <a href="/Groupbuying/file_upload">학교인증</a>
-<!-- 학교 인증 버튼 즉 링크를 클릭하는것은 HTTP 메소드에서 Get 메소드를 요청하는 것이다.-->
+    <div>
+      <input type="submit" class="btn2" value="가입하기";  onclick="alert('가입이 완료되었습니다.')"/>
+    </div>
 
   </form>
 </div>

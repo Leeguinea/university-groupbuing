@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,7 +47,7 @@
 
 .topnav-right {
   position: absolute;
-  left: 730px;
+  left: 637px;
   top: 20px;
 }
         .post {
@@ -109,48 +109,82 @@ span {
   font-size: smaller;
   color: blue;
 }
+.favorite-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  background-color: transparent;
+  cursor: pointer;
+}/*여보세요? 자스에요 자바 스크립트
+function toggleFavorite() {
+  const favoriteButton = document.querySelector('.favorite-button');
+  favoriteButton.classList.toggle('filled');
+}
+*/
+
+.favorite-button.filled {
+  background-color: #000000;
+}
+
+
 
   </style>
   
 </head>
 <body>
 	<header>
-        <a href="home">
-        <img src="https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/공구칭구.png" alt="이미지1" style="position: absolute; top: 33px; left: 0px; width: 367px; height: 63px;">
-        </a>
+		<img src="https://github.com/Leeguinea/university-groupbuing/raw/master/src/main/resources/static/image/공구칭구.png" alt="이미지1" style="position: absolute; top: 33px; left: 0px; width: 367px; height: 63px;">
 		<div class="search">
-            <form method="get" th:action="@{/gesi}">
-            <input type="text" name="searchKey" placeholder="공동구매 검색어를 입력하세요">
+			<input type="text" placeholder="공동구매 검색어를 입력하세요">
 			<button type="submit">검색</button>
-            </form>
 		</div>
-		<div class="topnav-right" th:if="${session.loginId != null}">
-            <a href="/gongi">공지사항</a>
-            <a href="/gesizak">글쓰기</a>
-            <a href="/jjim">내가 작성한 글</a>
-			<a href="/myPage">마이페이지</a>
-			<a href="/logout">로그아웃</a>
+		<div class="topnav-right"> 
+       <a href="#gongi">공지사항</a>
+      <a href="#jjim">찜</a>
+			<a href="#myPage">마이페이지</a>
+			<a href="#logout">로그아웃</a>
+     
 		</div>
-        <div class="topnav-right" th:if="${session.loginId == null}">
-            <a href="/gongi">공지사항</a>
-            <a href="GroupBuying/login">로그인</a>
-        </div>
 	</header>
-    <div class="post" th:each="board: ${boardList}">
+<div class="post">
+  <span id="post1">아이디</span>
+  <button class="favorite-button"></button>
+  <h2 class="title">제목1</h2>
+  <p class="content">내용1</p>
+  <div class="post-meta">
+    <button class="join-button">참여하기</button>
+    <p class="time">2023-04-14</p>
+  </div>
+</div>
+<div class="post">
+  <span id="post2">아이디</span>
+  <button class="favorite-button"></button>
+  <h2 class="title">제목2</h2>
+  <p class="content">내용2</p>
+  <div class="post-meta">
+    <button class="join-button">참여하기</button>
+    <p class="time">2023-04-13</p>
+  </div>
+</div>
 
-        <div class="post-item">
-            <span id="post1" th:text="${board.member.nickname}"></span>
-            <h2 class="title" th:text="'주제: ' + ${board.title}"></h2>
-            <p class="content" th:text="'내용:' +${board.content}"></p>
-            <div class="post-meta">
-                <button class="join-button">참여하기</button>
-                <p class="time" th:text="${board.date}"></p>
-            </div>
-        </div>
-    </div>
+  
+			
+		</div>
+	</div>
+  <div class="post">
+    <span id="post2">아이디</span>
+    <button class="favorite-button"></button>
+		<h2 class="title">제목3</h2>
+		<p class="content">내용3</p>
+		<div class="post-meta">
+      <button class="join-button">참여하기</button>
+			<p class="time">2023-04-12</p>
+
+		</div>
+	</div>
 </body>
-<a th:href="@{/gesi(searchKey = ${param.searchKeyword})}"></a>
-
 </html>
 
 </html>

@@ -1,5 +1,6 @@
 package com.example.GroupBuying.service;
 
+//테스트용 주석
 import com.example.GroupBuying.dto.MemberDTO;
 import com.example.GroupBuying.entity.MemberEntity;
 import com.example.GroupBuying.repository.MemberRepository;
@@ -46,4 +47,7 @@ public class MemberService {
         }
 
     }
+
+
+
 }

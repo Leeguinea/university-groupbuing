@@ -4,10 +4,6 @@ import com.example.GroupBuying.dto.BoardDTO;
 import com.example.GroupBuying.entity.Board;
 import com.example.GroupBuying.service.BoardService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,9 +31,9 @@ public class BoardController {
     @PostMapping("/gesizak")
     public String write(BoardDTO boardDTO, Model model) {
         boardService.write(boardDTO);
-        model.addAttribute("message", "게시물 등록 완료");
-        model.addAttribute("searchUrl", "/gesi");
-        return "message";
+        List<Board> boardList =boardService.findAll();
+        model.addAttribute("boardList", boardList);
+        return "gesi";
     }
 
     @GetMapping("/gesi")
@@ -52,18 +48,19 @@ public class BoardController {
         return "gesi";
     }
 
-    @GetMapping("/notice")
+    @GetMapping("/gongi")
     public String noticeForm(){
         return "notice";
     }
 
-    @GetMapping("withdrawal")
-    public String drawForm(){
-        return "withdrawal";
-    }
+    @GetMapping("/jjim")
+    public String loveForm(Model model, HttpSession session){
+        List<Board> myboardList = null;
+        String loginId = (String) session.getAttribute("loginId"); // 세션에서 아이디를 가져옴
 
-    @GetMapping("love")
-    public String loveForm(){
+        myboardList = boardService.findByWriter(loginId); // 로그인 아이디로 작성자가 일치하는 게시물을 가져옴
+        model.addAttribute("boardList",myboardList);
         return "love";
     }
+
 }

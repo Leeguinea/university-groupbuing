@@ -25,6 +25,8 @@ public class Board {
     private String item;
     private String content;
     private String category;
+    @Column(name = "writer_id")
+    private String writer;
     private LocalDateTime datetime;
     private LocalDate date;
 
